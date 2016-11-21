@@ -98,6 +98,8 @@
 	const { Route, Router, IndexRoute, hashHistory } = __webpack_require__(184);
 
 	const Main = __webpack_require__(239);
+	const Timer = __webpack_require__(247);
+	const Countdown = __webpack_require__(248);
 
 	__webpack_require__(241);
 	__webpack_require__(245);
@@ -105,7 +107,12 @@
 	ReactDOM.render(React.createElement(
 	  Router,
 	  { history: hashHistory },
-	  React.createElement(Route, { path: '/', component: Main })
+	  React.createElement(
+	    Route,
+	    { path: '/', component: Main },
+	    React.createElement(IndexRoute, { component: Timer }),
+	    React.createElement(Route, { path: 'countdown', component: Countdown })
+	  )
 	), document.getElementById('app'));
 
 /***/ },
@@ -26417,6 +26424,7 @@
 	    React.createElement(
 	      'div',
 	      null,
+	      'Main.jsx rendered',
 	      props.children
 	    )
 	  )
@@ -26880,10 +26888,50 @@
 
 
 	// module
-	exports.push([module.id, ".top-bar,\n.top-bar ul {\n  background-color: #333; }\n\n.top-bar .menu-text {\n  color: #fff; }\n\n.top-bar .menu > .menu-text > a {\n  display: inline-block;\n  padding: 0; }\n", ""]);
+	exports.push([module.id, ".top-bar,\n.top-bar ul {\n  background-color: #333; }\n\n.top-bar .menu-text {\n  color: #fff; }\n\n.top-bar .menu > .menu-text > a {\n  display: inline-block;\n  padding: 0; }\n\n.top-bar .active-link {\n  font-weight: bold; }\n", ""]);
 
 	// exports
 
+
+/***/ },
+/* 247 */
+/***/ function(module, exports, __webpack_require__) {
+
+	const React = __webpack_require__(7);
+
+	const Timer = React.createClass({
+	  displayName: 'Timer',
+
+	  render: function () {
+	    return React.createElement(
+	      'div',
+	      null,
+	      'Timer.jsx'
+	    );
+	  }
+	});
+
+	module.exports = Timer;
+
+/***/ },
+/* 248 */
+/***/ function(module, exports, __webpack_require__) {
+
+	const React = __webpack_require__(7);
+
+	const Countdown = React.createClass({
+	  displayName: 'Countdown',
+
+	  render: function () {
+	    return React.createElement(
+	      'div',
+	      null,
+	      'Countdown.jsx'
+	    );
+	  }
+	});
+
+	module.exports = Countdown;
 
 /***/ }
 /******/ ]);
