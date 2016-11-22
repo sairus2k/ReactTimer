@@ -45,5 +45,6 @@ module.exports = {
         test: /\.scss?$/
       }
     ]
-  }
+  },
+  devtool: 'cheap-module-eval-source-map'
 };
