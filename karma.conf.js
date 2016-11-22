@@ -4,7 +4,7 @@ module.exports = function (config) {
   config.set({
     browsers: ['Chrome'],
     singleRun: false,
-    frameworks: ['mocha'],
+    frameworks: ['mocha', 'sinon'],
     files: ['app/tests/**/*.spec.jsx'],
     preprocessors: {
       'app/tests/**/*.spec.jsx': ['webpack', 'sourcemap']
