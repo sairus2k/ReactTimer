@@ -5,7 +5,6 @@ const Timer = React.createClass({
   render: function () {
     return (
       <div>
-        Timer.jsx
         <Clock/>
       </div>
     )
